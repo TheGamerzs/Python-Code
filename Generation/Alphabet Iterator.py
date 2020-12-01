@@ -11,14 +11,14 @@ def iterate_strings(length):
     prevLen = 1
     nextNum = 96
     start = time.perf_counter()
-    
+
     for i in range(length):
         totalCount += pow(26, i+1)
 
     array = ['' for i in range(totalCount)]
-    
+
     for i in range(0, totalCount):
-        nextNum += 1 
+        nextNum += 1
         if nextNum > 122:
             nextNum = 97
         if i/26 == count:
@@ -31,7 +31,7 @@ def iterate_strings(length):
             for word in array:
                 if word != "" and len(word) == prevLen:
                     f.write(word + "\n")
-                    
+
             f.close()
             finish = time.perf_counter()
             print("\nPrefix: " + str(prefix))
@@ -44,7 +44,7 @@ def iterate_strings(length):
         if word != "" and len(word) == prevLen:
             f.write(word + "\n")
     f.close()
-            
+
     finish = time.perf_counter()
     print("\nPrefix: " + str(prefix))
     print("Count: " + str(count))
@@ -55,5 +55,5 @@ def main():
     length = int(input("Max String Length: "))
     print("--------------------")
     iterate_strings(length)
-    
+
 main()
