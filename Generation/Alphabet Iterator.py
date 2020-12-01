@@ -52,7 +52,7 @@ def iterate_strings(length):
 
 
 def main():
-    length = int(raw_input("Max String Length: "))
+    length = int(input("Max String Length: "))
     print("--------------------")
     iterate_strings(length)
 
